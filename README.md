@@ -29,3 +29,6 @@ Follow the steps:
 - git clone
 - npm i
 - ng serve
+
+S3: http://shop-angular-cloudfront-app-etrivinos.s3-website-eu-west-1.amazonaws.com/
+CloudFront: https://d11czz3rav1ja2.cloudfront.net/
