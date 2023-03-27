@@ -31,12 +31,16 @@ export class ManageProductsComponent implements OnInit {
       return;
     }
 
-    this.manageProductsService
-      .uploadProductsCSV(this.selectedFile)
-      .subscribe(() => {
+    this.manageProductsService.uploadProductsCSV(this.selectedFile).subscribe(
+      () => {
         console.log('File uploaded!');
         this.selectedFile = null;
         this.cdr.markForCheck();
-      });
+      },
+      (error: unknown) => {
+        console.log('Error:', error);
+        alert(error);
+      }
+    );
   }
 }
